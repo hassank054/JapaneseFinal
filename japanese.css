@@ -1,0 +1,160 @@
+body {
+    background-color: #FFFEF1;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e4ac98;
+    padding: 10px 20px;
+    border-bottom: 5px solid #6c370e;
+}
+
+p {
+    text-indent: 30px;
+}
+
+.logo {
+    display: grid;
+    width: 100%;
+    max-width: 300px;
+    height: 120px;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #484b3a;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #333;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: #484b3a;
+    cursor: pointer;
+}
+
+.close-btn {
+    display: none;
+    font-size: 1.5rem;
+    color: #484b3a;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+footer {
+    height: 50px;
+    background-color: #484B3A;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.textBox {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 2rem;
+    color: #484B3A;
+}
+
+.info {
+    padding: 40px;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.gridL {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 10px;
+    padding: 20px;
+}
+
+.lleft {
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.lright {
+    padding: 20px;
+    text-align: left;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.section {
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100vw;
+        max-width: 100%;
+        background-color: #e4ac98;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        padding-top: 20px;
+        margin-left: -40px;
+    }
+    .nav-links.active {
+        display: flex;
+        margin-top: 60px;
+        text-align: center;
+        padding-bottom: 20px;
+        border-bottom: 5px solid #6c370e;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .close-btn {
+        display: none;
+    }
+    .nav-links.active ~ .close-btn {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .gridL {
+        grid-template-columns: 1fr; /* Full width on small screens */
+    }
+}
